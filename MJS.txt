@@ -1,0 +1,2513 @@
+package variable1;
+
+//============================================================================
+//MASTER IMPORTS FOR MJS.java
+//Every individual question also explicitly lists its exact required imports 
+//and dependencies right at the start of that question's section!
+//============================================================================
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Stack;
+import java.util.Queue;
+import java.util.Collections;
+import java.util.Comparator;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.sql.SQLException;
+
+public class MJS {
+ public static void main(String[] args) {
+     System.out.println("==================================================================");
+     System.out.println("  MJS (Master Java Solutions) - Assignments, Labs & Exam Solutions");
+     System.out.println("==================================================================");
+     System.out.println("Use Ctrl+F to jump to any question tag:");
+     System.out.println("  [A1-Q1]..[A1-Q10]  | [A2-Q1]..[A2-Q10] | [A3-Q1]..[A3-Q8]");
+     System.out.println("  [A4-Q1]..[A4-Q5]   | [DAY4-OOP]..[DAY11-SER]");
+     System.out.println("  Batch 1 Exams: [EXAM-B1-HDFC], [EXAM-B1-AXIS], [EXAM-B1-ICICI], [EXAM-B1-SBI]");
+     System.out.println("  Batch 2 Exams: [EXAM-B2-BOB],  [EXAM-B2-IOB],  [EXAM-B2-PNB],   [EXAM-B2-CUB]");
+     System.out.println("==================================================================");
+     System.out.println("Tip: In Eclipse Outline View, right-click ANY main class and select");
+     System.out.println("'Run As -> Java Application' to execute that program directly.");
+ }
+}
+
+//############################################################################
+//TOPIC 1: JAVA ASSIGNMENT 1 – BASIC PROGRAMS (DATA TYPES, OPERATORS, IF-ELSE)
+//Search Tag: [ASSIGNMENT-1]
+//############################################################################
+
+//============================================================================
+//[A1-Q1] Assignment 1 - Program 1: Arithmetic Operations
+//Required Imports for this question:
+//(None - uses default java.lang package)
+//============================================================================
+class A1_Q1_ArithmeticOperations {
+ public static void main(String[] args) {
+     int a = 25, b = 10;
+     System.out.println("Addition: " + (a + b));
+     System.out.println("Subtraction: " + (a - b));
+     System.out.println("Multiplication: " + (a * b));
+     System.out.println("Division: " + (a / b));
+     System.out.println("Remainder: " + (a % b));
+ }
+}
+
+//============================================================================
+//[A1-Q2] Assignment 1 - Program 2: Area of a Circle
+//Required Imports for this question:
+//(None - uses default java.lang.Math)
+//============================================================================
+class A1_Q2_AreaOfCircle {
+ public static void main(String[] args) {
+     double r = 7.0;
+     double area = Math.PI * r * r;
+     double circumference = 2 * Math.PI * r;
+     System.out.printf("Radius: %.2f%nArea: %.2f%nCircumference: %.2f%n", r, area, circumference);
+ }
+}
+
+//============================================================================
+//[A1-Q3] Assignment 1 - Program 3: Simple Interest
+//Required Imports for this question:
+//(None - uses default java.lang package)
+//============================================================================
+class A1_Q3_SimpleInterest {
+ public static void main(String[] args) {
+     double p = 10000, r = 7.5, t = 2;
+     double si = (p * r * t) / 100;
+     double amount = p + si;
+     System.out.println("Simple Interest = " + si);
+     System.out.println("Total Amount = " + amount);
+ }
+}
+
+//============================================================================
+//[A1-Q4] Assignment 1 - Program 4: Temperature Conversion
+//Required Imports for this question:
+//(None - uses default java.lang package)
+//============================================================================
+class A1_Q4_TemperatureConversion {
+ public static void main(String[] args) {
+     double celsius = 37.0;
+     double fahrenheit = (celsius * 9 / 5) + 32;
+     System.out.println(celsius + " °C = " + fahrenheit + " °F");
+ }
+}
+
+//============================================================================
+//[A1-Q5] Assignment 1 - Program 5: Calculate Total and Average
+//Required Imports for this question:
+//(None - uses default java.lang package)
+//============================================================================
+class A1_Q5_TotalAndAverage {
+ public static void main(String[] args) {
+     int m1 = 85, m2 = 90, m3 = 78;
+     int total = m1 + m2 + m3;
+     double average = total / 3.0;
+     System.out.println("Total Marks = " + total);
+     System.out.printf("Average Marks = %.2f%n", average);
+ }
+}
+
+//============================================================================
+//[A1-Q6] Assignment 1 - Program 6: Even or Odd
+//Required Imports for this question:
+//import java.util.Scanner;
+//============================================================================
+class A1_Q6_EvenOrOdd {
+ public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+     System.out.print("Enter an integer: ");
+     int num = sc.nextInt();
+     if (num % 2 == 0) System.out.println(num + " is Even.");
+     else System.out.println(num + " is Odd.");
+ }
+}
+
+//============================================================================
+//[A1-Q7] Assignment 1 - Program 7: Positive, Negative or Zero
+//Required Imports for this question:
+//import java.util.Scanner;
+//============================================================================
+class A1_Q7_PositiveNegativeZero {
+ public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+     System.out.print("Enter an integer: ");
+     int num = sc.nextInt();
+     if (num > 0) System.out.println("Positive");
+     else if (num < 0) System.out.println("Negative");
+     else System.out.println("Zero");
+ }
+}
+
+//============================================================================
+//[A1-Q8] Assignment 1 - Program 8: Largest of Two Numbers
+//Required Imports for this question:
+//import java.util.Scanner;
+//============================================================================
+class A1_Q8_LargestOfTwo {
+ public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+     System.out.print("Enter two numbers: ");
+     int a = sc.nextInt();
+     int b = sc.nextInt();
+     if (a > b) System.out.println("Larger number is: " + a);
+     else if (b > a) System.out.println("Larger number is: " + b);
+     else System.out.println("Both numbers are equal.");
+ }
+}
+
+//============================================================================
+//[A1-Q9] Assignment 1 - Program 9: Voting Eligibility
+//Required Imports for this question:
+//import java.util.Scanner;
+//============================================================================
+class A1_Q9_VotingEligibility {
+ public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+     System.out.print("Enter age: ");
+     int age = sc.nextInt();
+     if (age >= 18) System.out.println("Eligible");
+     else System.out.println("Not Eligible");
+ }
+}
+
+//============================================================================
+//[A1-Q10] Assignment 1 - Program 10: Student Result
+//Required Imports for this question:
+//import java.util.Scanner;
+//============================================================================
+class A1_Q10_StudentResult {
+ public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+     System.out.print("Enter marks: ");
+     int marks = sc.nextInt();
+     if (marks >= 40) System.out.println("Pass");
+     else System.out.println("Fail");
+ }
+}
+
+
+//############################################################################
+//TOPIC 2: JAVA ASSIGNMENT 2 – STATIC METHODS & CONDITIONAL STATEMENTS
+//Search Tag: [ASSIGNMENT-2]
+//############################################################################
+
+//============================================================================
+//[A2-Q1] Assignment 2 - Program 1: Electricity Bill Calculation (if-else-if)
+//Required Imports for this question:
+//import java.util.Scanner;
+//============================================================================
+class A2_Q1_ElectricityBill {
+ public static double calculateBill(int units) {
+     if (units <= 100) return units * 2.0;
+     else if (units <= 200) return units * 3.0;
+     else if (units <= 300) return units * 5.0;
+     else return units * 7.0;
+ }
+
+ public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+     System.out.print("Enter units consumed: ");
+     int units = sc.nextInt();
+     System.out.println("Bill Amount: Rs. " + calculateBill(units));
+ }
+}
+
+//============================================================================
+//[A2-Q2] Assignment 2 - Program 2: Student Grade Calculation (if-else-if)
+//Required Imports for this question:
+//import java.util.Scanner;
+//============================================================================
+class A2_Q2_StudentGrade {
+ public static char calculateGrade(int marks) {
+     if (marks >= 90 && marks <= 100) return 'A';
+     else if (marks >= 75) return 'B';
+     else if (marks >= 60) return 'C';
+     else if (marks >= 50) return 'D';
+     else return 'F';
+ }
+
+ public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+     System.out.print("Enter marks: ");
+     int marks = sc.nextInt();
+     System.out.println("Grade: " + calculateGrade(marks));
+ }
+}
+
+//============================================================================
+//[A2-Q3] Assignment 2 - Program 3: Product Discount (if-else-if)
+//Required Imports for this question:
+//import java.util.Scanner;
+//============================================================================
+class A2_Q3_ProductDiscount {
+ public static double calculateFinalPrice(double price) {
+     double discountRate = 0.0;
+     if (price >= 10000) discountRate = 0.20;
+     else if (price >= 5000) discountRate = 0.10;
+     else if (price >= 2000) discountRate = 0.05;
+     return price - (price * discountRate);
+ }
+
+ public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+     System.out.print("Enter Product ID: ");
+     int productId = sc.nextInt();
+     sc.nextLine();
+     System.out.print("Enter Product Name: ");
+     String productName = sc.nextLine();
+     System.out.print("Enter Price: ");
+     double price = sc.nextDouble();
+     System.out.println("Product ID: " + productId + " | Name: " + productName
+             + " | Final Price: Rs. " + calculateFinalPrice(price));
+ }
+}
+
+//============================================================================
+//[A2-Q4] Assignment 2 - Program 4: Largest of Two Numbers (if-else)
+//Required Imports for this question:
+//import java.util.Scanner;
+//============================================================================
+class A2_Q4_LargestOfTwoMethod {
+ public static int findLargest(int a, int b) {
+     return (a >= b) ? a : b;
+ }
+
+ public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+     System.out.print("Enter two integers: ");
+     int x = sc.nextInt();
+     int y = sc.nextInt();
+     System.out.println("Largest: " + findLargest(x, y));
+ }
+}
+
+//============================================================================
+//[A2-Q5] Assignment 2 - Program 5: Check Voting Eligibility (boolean return)
+//Required Imports for this question:
+//import java.util.Scanner;
+//============================================================================
+class A2_Q5_VotingEligibilityMethod {
+ public static boolean isEligible(int age) {
+     return age >= 18;
+ }
+
+ public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+     System.out.print("Enter age: ");
+     int age = sc.nextInt();
+     if (isEligible(age)) System.out.println("Person is eligible to vote.");
+     else System.out.println("Person is NOT eligible to vote.");
+ }
+}
+
+//============================================================================
+//[A2-Q6] Assignment 2 - Program 6: Employee Salary Calculation (if-else)
+//Required Imports for this question:
+//import java.util.Scanner;
+//============================================================================
+class A2_Q6_EmployeeSalaryMethod {
+ public static double calculateSalary(double basic) {
+     if (basic >= 50000) return basic + (basic * 0.20);
+     else return basic + (basic * 0.10);
+ }
+
+ public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+     System.out.print("Enter basic salary: ");
+     double basic = sc.nextDouble();
+     System.out.println("Final Salary: Rs. " + calculateSalary(basic));
+ }
+}
+
+//============================================================================
+//[A2-Q7] Assignment 2 - Program 7: Temperature Conversion (Operators + if)
+//Required Imports for this question:
+//import java.util.Scanner;
+//============================================================================
+class A2_Q7_TemperatureConversionMethod {
+ public static double convertTemperature(double celsius) {
+     return (celsius * 9.0 / 5.0) + 32.0;
+ }
+
+ public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+     System.out.print("Enter temperature in Celsius: ");
+     double c = sc.nextDouble();
+     double f = convertTemperature(c);
+     System.out.println("Temperature in Fahrenheit: " + f + " °F");
+     if (f > 100) System.out.println("Warning: Temperature is above 100°F!");
+ }
+}
+
+//============================================================================
+//[A2-Q8] Assignment 2 - Program 8: Simple Calculator (if-else-if)
+//Required Imports for this question:
+//import java.util.Scanner;
+//============================================================================
+class A2_Q8_SimpleCalculator {
+ public static double calculate(double a, double b, char op) {
+     if (op == '+') return a + b;
+     else if (op == '-') return a - b;
+     else if (op == '*') return a * b;
+     else if (op == '/') {
+         if (b == 0) {
+             System.out.println("Error: Division by zero!");
+             return 0;
+         }
+         return a / b;
+     } else {
+         System.out.println("Invalid operator!");
+         return 0;
+     }
+ }
+
+ public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+     System.out.print("Enter first number, operator (+, -, *, /), and second number: ");
+     double n1 = sc.nextDouble();
+     char op = sc.next().charAt(0);
+     double n2 = sc.nextDouble();
+     System.out.println("Result: " + calculate(n1, n2, op));
+ }
+}
+
+//============================================================================
+//[A2-Q9] Assignment 2 - Program 9: Bus Ticket Fare (if-else-if)
+//Required Imports for this question:
+//import java.util.Scanner;
+//============================================================================
+class A2_Q9_BusTicketFare {
+ public static double calculateFare(int age) {
+     if (age < 5) return 0.0;
+     else if (age <= 12) return 20.0;
+     else if (age <= 59) return 40.0;
+     else return 25.0;
+ }
+
+ public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+     System.out.print("Enter Passenger Name: ");
+     String name = sc.nextLine();
+     System.out.print("Enter Passenger Age: ");
+     int age = sc.nextInt();
+     System.out.println("Passenger: " + name + " | Age: " + age + " | Fare: Rs. " + calculateFare(age));
+ }
+}
+
+//============================================================================
+//[A2-Q10] Assignment 2 - Program 10: Mobile Data Usage (if-else-if)
+//Required Imports for this question:
+//import java.util.Scanner;
+//============================================================================
+class A2_Q10_MobileDataUsage {
+ public static double calculateCharge(double gb) {
+     if (gb <= 1.0) return 50.0;
+     else if (gb <= 5.0) return 100.0;
+     else if (gb <= 10.0) return 200.0;
+     else return 350.0;
+ }
+
+ public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+     System.out.print("Enter Mobile Number: ");
+     long mobile = sc.nextLong();
+     System.out.print("Enter Data Used (in GB): ");
+     double gb = sc.nextDouble();
+     System.out.println("Mobile: " + mobile + " | Data: " + gb + " GB | Charge: Rs. " + calculateCharge(gb));
+ }
+}
+
+
+//############################################################################
+//TOPIC 3: JAVA ASSIGNMENT 3 – ARRAYS & COMMAND-LINE ARGUMENTS
+//Search Tag: [ASSIGNMENT-3]
+//############################################################################
+
+//============================================================================
+//[A3-Q1] Assignment 3 - Program 1: Find Sum and Average of Array
+//Required Imports for this question:
+//import java.util.Scanner;
+//============================================================================
+class A3_Q1_ArraySumAverage {
+ public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+     System.out.print("Enter number of elements (n): ");
+     int n = sc.nextInt();
+     int[] arr = new int[n];
+     int sum = 0;
+     for (int i = 0; i < n; i++) {
+         arr[i] = sc.nextInt();
+         sum += arr[i];
+     }
+     System.out.println("Sum = " + sum + "\nAverage = " + ((double) sum / n));
+ }
+}
+
+//============================================================================
+//[A3-Q2] Assignment 3 - Program 2: Find Largest and Smallest in Array
+//Required Imports for this question:
+//import java.util.Scanner;
+//============================================================================
+class A3_Q2_ArrayLargestSmallest {
+ public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+     System.out.print("Enter number of elements (n): ");
+     int n = sc.nextInt();
+     int[] arr = new int[n];
+     for (int i = 0; i < n; i++) arr[i] = sc.nextInt();
+     int largest = arr[0], smallest = arr[0];
+     for (int i = 1; i < n; i++) {
+         if (arr[i] > largest) largest = arr[i];
+         if (arr[i] < smallest) smallest = arr[i];
+     }
+     System.out.println("Largest = " + largest + "\nSmallest = " + smallest);
+ }
+}
+
+//============================================================================
+//[A3-Q3] Assignment 3 - Program 3: Count Even and Odd Numbers in Array
+//Required Imports for this question:
+//import java.util.Scanner;
+//============================================================================
+class A3_Q3_CountEvenOdd {
+ public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+     System.out.print("Enter number of elements (n): ");
+     int n = sc.nextInt();
+     int[] arr = new int[n];
+     int even = 0, odd = 0;
+     for (int i = 0; i < n; i++) {
+         arr[i] = sc.nextInt();
+         if (arr[i] % 2 == 0) even++;
+         else odd++;
+     }
+     System.out.println("Even numbers = " + even + "\nOdd numbers = " + odd);
+ }
+}
+
+//============================================================================
+//[A3-Q4] Assignment 3 - Program 4: Search an Element in Array
+//Required Imports for this question:
+//import java.util.Scanner;
+//============================================================================
+class A3_Q4_SearchElement {
+ public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+     System.out.print("Enter number of elements (n): ");
+     int n = sc.nextInt();
+     int[] arr = new int[n];
+     for (int i = 0; i < n; i++) arr[i] = sc.nextInt();
+     System.out.print("Enter element to search: ");
+     int target = sc.nextInt();
+     int idx = -1;
+     for (int i = 0; i < n; i++) {
+         if (arr[i] == target) {
+             idx = i;
+             break;
+         }
+     }
+     if (idx != -1) System.out.println("Element found at index " + idx);
+     else System.out.println("Element not found");
+ }
+}
+
+//============================================================================
+//[A3-Q5] Assignment 3 - Program 5: Reverse an Array
+//Required Imports for this question:
+//import java.util.Scanner;
+//============================================================================
+class A3_Q5_ReverseArray {
+ public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+     System.out.print("Enter number of elements (n): ");
+     int n = sc.nextInt();
+     int[] arr = new int[n];
+     for (int i = 0; i < n; i++) arr[i] = sc.nextInt();
+     for (int i = n - 1; i >= 0; i--) System.out.print(arr[i] + " ");
+     System.out.println();
+ }
+}
+
+//============================================================================
+//[A3-Q6] Assignment 3 - Program 6: Find Duplicate Elements in Array
+//Required Imports for this question:
+//import java.util.Scanner;
+//============================================================================
+class A3_Q6_FindDuplicates {
+ public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+     System.out.print("Enter number of elements (n): ");
+     int n = sc.nextInt();
+     int[] arr = new int[n];
+     for (int i = 0; i < n; i++) arr[i] = sc.nextInt();
+     System.out.println("Duplicate elements:");
+     for (int i = 0; i < n; i++) {
+         boolean printed = false;
+         for (int k = 0; k < i; k++) {
+             if (arr[i] == arr[k]) {
+                 printed = true;
+                 break;
+             }
+         }
+         if (printed) continue;
+         for (int j = i + 1; j < n; j++) {
+             if (arr[i] == arr[j]) {
+                 System.out.println(arr[i]);
+                 break;
+             }
+         }
+     }
+ }
+}
+
+//============================================================================
+//[A3-Q7] Assignment 3 - Program 7: Separate Positive, Negative, and Zeroes
+//Required Imports for this question:
+//import java.util.Scanner;
+//============================================================================
+class A3_Q7_SeparatePosNegZero {
+ public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+     System.out.print("Enter number of elements (n): ");
+     int n = sc.nextInt();
+     int[] arr = new int[n];
+     for (int i = 0; i < n; i++) arr[i] = sc.nextInt();
+     StringBuilder pos = new StringBuilder(), neg = new StringBuilder();
+     int zeros = 0;
+     for (int i = 0; i < n; i++) {
+         if (arr[i] > 0) pos.append(arr[i]).append(" ");
+         else if (arr[i] < 0) neg.append(arr[i]).append(" ");
+         else zeros++;
+     }
+     System.out.println("Positive numbers: " + pos.toString().trim());
+     System.out.println("Negative numbers: " + neg.toString().trim());
+     System.out.println("Zero values: " + zeros);
+ }
+}
+
+//============================================================================
+//[A3-Q8] Assignment 3 - Program 8: Student Marks Using Command-Line Arguments
+//Required Imports for this question:
+//(None - uses default java.lang.Integer)
+//============================================================================
+class A3_Q8_StudentResultCLI {
+ public static void main(String[] args) {
+     if (args.length < 4) args = new String[]{"Ravi", "80", "75", "90"};
+     String name = args[0];
+     int m1 = Integer.parseInt(args[1]);
+     int m2 = Integer.parseInt(args[2]);
+     int m3 = Integer.parseInt(args[3]);
+     int total = m1 + m2 + m3;
+     double avg = total / 3.0;
+     String res = (m1 >= 40 && m2 >= 40 && m3 >= 40) ? "PASS" : "FAIL";
+     System.out.printf("Student Name: %s%nMark 1: %d%nMark 2: %d%nMark 3: %d%nTotal: %d%nAverage: %.2f%nResult: %s%n",
+             name, m1, m2, m3, total, avg, res);
+ }
+}
+
+
+//############################################################################
+//TOPIC 4: ASSIGNMENT 4 (JAVA PART II - ASSIGNMENT 1: CLASSES AND OBJECTS)
+//Search Tag: [ASSIGNMENT-4]
+//############################################################################
+
+//============================================================================
+//[A4-Q1] Assignment 4 - Program 1: Student Result Management
+//Required Imports for this question:
+//import java.util.Scanner;
+//============================================================================
+class A4_Student {
+ int studentId;
+ String studentName;
+ double marks;
+
+ public void read(Scanner sc) {
+     System.out.print("Enter Student ID, Name, and Marks: ");
+     this.studentId = sc.nextInt();
+     this.studentName = sc.next();
+     this.marks = sc.nextDouble();
+ }
+
+ public String findResult() {
+     return (this.marks >= 50) ? "Pass" : "Fail";
+ }
+
+ public void display() {
+     System.out.println("ID: " + studentId + " | Name: " + studentName
+             + " | Marks: " + marks + " | Result: " + findResult());
+ }
+}
+
+class StudentManagement {
+ public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+     A4_Student s1 = new A4_Student(), s2 = new A4_Student(), s3 = new A4_Student();
+     s1.read(sc); s2.read(sc); s3.read(sc);
+     s1.display(); s2.display(); s3.display();
+ }
+}
+
+//============================================================================
+//[A4-Q2] Assignment 4 - Program 2: Employee Salary Calculation
+//Required Imports for this question:
+//import java.util.Scanner;
+//============================================================================
+class A4_Employee {
+ int empId;
+ String empName;
+ double basicSalary;
+
+ public void read(Scanner sc) {
+     System.out.print("Enter Employee ID, Name, and Basic Salary: ");
+     this.empId = sc.nextInt();
+     this.empName = sc.next();
+     this.basicSalary = sc.nextDouble();
+ }
+
+ public double calculateSalary() {
+     return basicSalary + (basicSalary * 0.20) + (basicSalary * 0.10);
+ }
+
+ public void display() {
+     System.out.println("Emp ID: " + empId + " | Name: " + empName
+             + " | Basic: Rs." + basicSalary + " | Total Salary: Rs." + calculateSalary());
+ }
+}
+
+class EmployeeManagement {
+ public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+     A4_Employee e1 = new A4_Employee(), e2 = new A4_Employee(), e3 = new A4_Employee();
+     e1.read(sc); e2.read(sc); e3.read(sc);
+     e1.display(); e2.display(); e3.display();
+ }
+}
+
+//============================================================================
+//[A4-Q3] Assignment 4 - Program 3: Electricity Bill Calculation
+//Required Imports for this question:
+//import java.util.Scanner;
+//============================================================================
+class ElectricityBill {
+ int consumerNumber;
+ String consumerName;
+ int unitsConsumed;
+
+ public void read(Scanner sc) {
+     System.out.print("Enter Consumer No, Name, and Units Consumed: ");
+     this.consumerNumber = sc.nextInt();
+     this.consumerName = sc.next();
+     this.unitsConsumed = sc.nextInt();
+ }
+
+ public double calculateBill() {
+     if (unitsConsumed <= 100) return unitsConsumed * 3.0;
+     else if (unitsConsumed <= 200) return (100 * 3.0) + ((unitsConsumed - 100) * 5.0);
+     else return (100 * 3.0) + (100 * 5.0) + ((unitsConsumed - 200) * 8.0);
+ }
+
+ public void display() {
+     System.out.println("Consumer No: " + consumerNumber + " | Name: " + consumerName
+             + " | Units: " + unitsConsumed + " | Bill Amount: Rs." + calculateBill());
+ }
+}
+
+class ElectricityBillManagement {
+ public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+     ElectricityBill b1 = new ElectricityBill(), b2 = new ElectricityBill(), b3 = new ElectricityBill();
+     b1.read(sc); b2.read(sc); b3.read(sc);
+     b1.display(); b2.display(); b3.display();
+ }
+}
+
+//============================================================================
+//[A4-Q4] Assignment 4 - Program 4: Bank Account Management
+//Required Imports for this question:
+//import java.util.Scanner;
+//============================================================================
+class BankAccount {
+ long accountNumber;
+ String accountHolderName;
+ double balance;
+
+ public void read(Scanner sc) {
+     System.out.print("Enter Account No, Holder Name, and Balance: ");
+     this.accountNumber = sc.nextLong();
+     this.accountHolderName = sc.next();
+     this.balance = sc.nextDouble();
+ }
+
+ public String checkCategory() {
+     if (balance >= 100000) return "Premium";
+     else if (balance >= 25000) return "Standard";
+     else return "Basic";
+ }
+
+ public void display() {
+     System.out.println("Account No: " + accountNumber + " | Holder: " + accountHolderName
+             + " | Balance: Rs." + balance + " | Category: " + checkCategory());
+ }
+}
+
+class BankAccountManagement {
+ public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+     BankAccount a1 = new BankAccount(), a2 = new BankAccount(), a3 = new BankAccount();
+     a1.read(sc); a2.read(sc); a3.read(sc);
+     a1.display(); a2.display(); a3.display();
+ }
+}
+
+//============================================================================
+//[A4-Q5] Assignment 4 - Program 5: Online Shopping Discount
+//Required Imports for this question:
+//import java.util.Scanner;
+//============================================================================
+class ShoppingBill {
+ int orderId;
+ String customerName;
+ double purchaseAmount;
+
+ public void read(Scanner sc) {
+     System.out.print("Enter Order ID, Customer Name, and Purchase Amount: ");
+     this.orderId = sc.nextInt();
+     this.customerName = sc.next();
+     this.purchaseAmount = sc.nextDouble();
+ }
+
+ public double calculateDiscount() {
+     if (purchaseAmount >= 10000) return purchaseAmount * 0.15;
+     else if (purchaseAmount >= 5000) return purchaseAmount * 0.10;
+     else if (purchaseAmount >= 1000) return purchaseAmount * 0.05;
+     else return 0.0;
+ }
+
+ public void display() {
+     double discount = calculateDiscount();
+     System.out.println("Order ID: " + orderId + " | Customer: " + customerName
+             + " | Purchase: Rs." + purchaseAmount + " | Discount: Rs." + discount
+             + " | Final Payable: Rs." + (purchaseAmount - discount));
+ }
+}
+
+class ShoppingBillManagement {
+ public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+     ShoppingBill sb1 = new ShoppingBill(), sb2 = new ShoppingBill(), sb3 = new ShoppingBill();
+     sb1.read(sc); sb2.read(sc); sb3.read(sc);
+     sb1.display(); sb2.display(); sb3.display();
+ }
+}
+
+
+//############################################################################
+//TOPIC 5 TO 9: DAILY LAB EXERCISES (DAYS 4, 8, 9, 10, 11)
+//Search Tags: [DAY4-OOP], [DAY8-OOP], [DAY9-COLL], [DAY10-EX], [DAY11-SER]
+//############################################################################
+
+//============================================================================
+//[DAY4-OOP] Array of Objects & Parameterized Constructors
+//Required Imports for this question:
+//(None)
+//============================================================================
+class Day4_Emp {
+ int empId;
+ String empName;
+ double salary;
+
+ public Day4_Emp(int empId, String empName, double salary) {
+     this.empId = empId;
+     this.empName = empName;
+     this.salary = salary;
+ }
+
+ public void display() {
+     System.out.println("Emp ID: " + empId + " | Name: " + empName + " | Salary: " + salary);
+ }
+}
+
+class TestArrayofObject {
+ public static void main(String[] args) {
+     Day4_Emp[] arr = {
+         new Day4_Emp(101, "Arjun", 55000),
+         new Day4_Emp(102, "Meera", 62000)
+     };
+     for (Day4_Emp e : arr) e.display();
+ }
+}
+
+//============================================================================
+//[DAY8-OOP] Abstraction, Interfaces, and ArrayList
+//Required Imports for this question:
+//import java.util.ArrayList;
+//============================================================================
+interface Myinterface {
+ void connect();
+ void disconnect();
+}
+
+abstract class Payment {
+ double amount;
+ public Payment(double amount) { this.amount = amount; }
+ abstract void makePayment();
+}
+
+class CreditCardPayment extends Payment implements Myinterface {
+ public CreditCardPayment(double amount) { super(amount); }
+ @Override public void connect() { System.out.println("Gateway Connected."); }
+ @Override void makePayment() { System.out.println("Paid Rs. " + amount); }
+ @Override public void disconnect() { System.out.println("Gateway Disconnected."); }
+}
+
+//============================================================================
+//[DAY9-COLL] Collections: ArrayList, HashMap, Stack, Queue
+//Required Imports for this question:
+//import java.util.ArrayList;
+//import java.util.HashMap;
+//import java.util.Map;
+//import java.util.Stack;
+//import java.util.Queue;
+//import java.util.LinkedList;
+//import java.io.Serializable;
+//============================================================================
+class Day9_Book implements Serializable {
+ private static final long serialVersionUID = 1L;
+ int bookId;
+ String title;
+ public Day9_Book(int bookId, String title) { this.bookId = bookId; this.title = title; }
+ @Override public String toString() { return bookId + ": " + title; }
+}
+
+//============================================================================
+//[DAY10-EX] Custom Exception & Character File I/O
+//Required Imports for this question:
+//import java.io.FileWriter;
+//import java.io.FileReader;
+//import java.io.BufferedReader;
+//import java.io.IOException;
+//============================================================================
+class LessBalanceException extends Exception {
+ private static final long serialVersionUID = 1L;
+ public LessBalanceException(String msg) { super(msg); }
+}
+
+//============================================================================
+//[DAY11-SER] Object Serialization (ObjectOutputStream / ObjectInputStream)
+//Required Imports for this question:
+//import java.io.Serializable;
+//import java.io.FileOutputStream;
+//import java.io.ObjectOutputStream;
+//import java.io.FileInputStream;
+//import java.io.ObjectInputStream;
+//import java.io.IOException;
+//============================================================================
+class Day11_Employee implements Serializable {
+ private static final long serialVersionUID = 1L;
+ int id;
+ String name;
+ double salary;
+ public Day11_Employee(int id, String name, double salary) {
+     this.id = id; this.name = name; this.salary = salary;
+ }
+ @Override public String toString() { return id + " | " + name + " | Rs." + salary; }
+}
+
+
+//############################################################################
+//BATCH 1 LAB EXAM SOLUTIONS (CODES: HDFC, AXIS, ICICI, SBI)
+//############################################################################
+
+//============================================================================
+//[EXAM-B1-HDFC] Batch 1 OOP Lab Exam - Question Code: HDFC
+//Problem: Travel Booking Management System (BusBooking & TrainBooking)
+//Topics: Abstract Class, Inheritance, Method Overriding, Interface, static Counter
+//Required Imports for this question:
+//(None - uses default java.lang package)
+//============================================================================
+interface DiscountApplicable {
+ double calculateDiscount(double fare);
+}
+
+abstract class Booking {
+ String bookingId;
+ String passengerName;
+ String source;
+ String destination;
+ int numberOfPassengers;
+ static int totalBookings = 0;
+
+ public Booking(String bookingId, String passengerName, String source, String destination, int numberOfPassengers) {
+     this.bookingId = bookingId;
+     this.passengerName = passengerName;
+     this.source = source;
+     this.destination = destination;
+     this.numberOfPassengers = numberOfPassengers;
+     totalBookings++;
+ }
+
+ public void displayBookingDetails() {
+     System.out.println("Booking ID           : " + bookingId);
+     System.out.println("Passenger Name       : " + passengerName);
+     System.out.println("Source               : " + source);
+     System.out.println("Destination          : " + destination);
+     System.out.println("Number of Passengers : " + numberOfPassengers);
+ }
+
+ public abstract double calculateFare();
+}
+
+class BusBooking extends Booking implements DiscountApplicable {
+ String busNumber;
+ String busType;
+ String seatNumber;
+ double farePerPassenger;
+
+ public BusBooking(String bookingId, String passengerName, String source, String destination,
+                   int numberOfPassengers, String busNumber, String busType, String seatNumber, double farePerPassenger) {
+     super(bookingId, passengerName, source, destination, numberOfPassengers);
+     this.busNumber = busNumber;
+     this.busType = busType;
+     this.seatNumber = seatNumber;
+     this.farePerPassenger = farePerPassenger;
+ }
+
+ @Override
+ public double calculateFare() {
+     return farePerPassenger * numberOfPassengers;
+ }
+
+ @Override
+ public double calculateDiscount(double fare) {
+     if (numberOfPassengers >= 4) {
+         return fare * 0.10; // 10% discount for 4 or more passengers
+     }
+     return 0.0;
+ }
+
+ public void displayCompleteDetails() {
+     System.out.println("\n----- BUS BOOKING DETAILS -----");
+     super.displayBookingDetails();
+     System.out.println("Bus Number           : " + busNumber);
+     System.out.println("Bus Type             : " + busType);
+     System.out.println("Seat Number          : " + seatNumber);
+     System.out.println("Fare Per Passenger   : Rs. " + farePerPassenger);
+     double totalFare = calculateFare();
+     double discount = calculateDiscount(totalFare);
+     double finalAmount = totalFare - discount;
+     System.out.println("Total Fare           : Rs. " + totalFare);
+     System.out.println("Discount             : Rs. " + discount);
+     System.out.println("Final Payable Amount : Rs. " + finalAmount);
+ }
+}
+
+class TrainBooking extends Booking implements DiscountApplicable {
+ String trainNumber;
+ String trainName;
+ String coachType;
+ String berthNumber;
+ double farePerPassenger;
+
+ public TrainBooking(String bookingId, String passengerName, String source, String destination,
+                     int numberOfPassengers, String trainNumber, String trainName, String coachType,
+                     String berthNumber, double farePerPassenger) {
+     super(bookingId, passengerName, source, destination, numberOfPassengers);
+     this.trainNumber = trainNumber;
+     this.trainName = trainName;
+     this.coachType = coachType;
+     this.berthNumber = berthNumber;
+     this.farePerPassenger = farePerPassenger;
+ }
+
+ @Override
+ public double calculateFare() {
+     return farePerPassenger * numberOfPassengers;
+ }
+
+ @Override
+ public double calculateDiscount(double fare) {
+     if (numberOfPassengers >= 3) {
+         return fare * 0.05; // 5% discount for 3 or more passengers
+     }
+     return 0.0;
+ }
+
+ public void displayCompleteDetails() {
+     System.out.println("\n----- TRAIN BOOKING DETAILS -----");
+     super.displayBookingDetails();
+     System.out.println("Train Number         : " + trainNumber);
+     System.out.println("Train Name           : " + trainName);
+     System.out.println("Coach Type           : " + coachType);
+     System.out.println("Berth Number         : " + berthNumber);
+     System.out.println("Fare Per Passenger   : Rs. " + farePerPassenger);
+     double totalFare = calculateFare();
+     double discount = calculateDiscount(totalFare);
+     double finalAmount = totalFare - discount;
+     System.out.println("Total Fare           : Rs. " + totalFare);
+     System.out.println("Discount             : Rs. " + discount);
+     System.out.println("Final Payable Amount : Rs. " + finalAmount);
+ }
+}
+
+class TravelBookingDemo {
+ public static void main(String[] args) {
+     BusBooking b1 = new BusBooking("BUS101", "Arun Kumar", "Bangalore", "Hyderabad", 4,
+             "KA-01-F-1234", "AC Sleeper", "L1-L4", 1200.0);
+     BusBooking b2 = new BusBooking("BUS102", "Sneha Rao", "Chennai", "Bangalore", 2,
+             "TN-09-N-5678", "Volvo Semi-Sleeper", "S5-S6", 750.0);
+
+     TrainBooking t1 = new TrainBooking("TRN201", "Rajesh Verma", "Delhi", "Mumbai", 3,
+             "12952", "Rajdhani Express", "3A", "B2-15,16,17", 2200.0);
+     TrainBooking t2 = new TrainBooking("TRN202", "Priya Nair", "Bangalore", "Mysore", 1,
+             "12007", "Shatabdi Express", "CC", "C1-42", 450.0);
+
+     b1.displayCompleteDetails();
+     b2.displayCompleteDetails();
+     t1.displayCompleteDetails();
+     t2.displayCompleteDetails();
+
+     System.out.println("\n==========================================");
+     System.out.println("Total Bookings Created: " + Booking.totalBookings);
+     System.out.println("==========================================");
+ }
+}
+
+
+//============================================================================
+//[EXAM-B1-AXIS] Batch 1 ArrayList Lab Exam - Question Code: AXIS
+//Problem: Vehicle Service Management System
+//Topics: ArrayList CRUD, Unique ID Check, Comparator Descending Sort, Business Report
+//Required Imports for this question:
+//import java.util.ArrayList;
+//import java.util.Collections;
+//import java.util.Comparator;
+//import java.util.Scanner;
+//============================================================================
+class VehicleService {
+ String serviceId;
+ String vehicleNumber;
+ String ownerName;
+ String vehicleType;   // Bike / Car / SUV
+ String serviceType;   // General Service / Oil Change / Repair / Full Service
+ double serviceCost;
+ String serviceStatus; // Pending / In Progress / Completed
+
+ public VehicleService(String serviceId, String vehicleNumber, String ownerName,
+                       String vehicleType, String serviceType, double serviceCost, String serviceStatus) {
+     this.serviceId = serviceId;
+     this.vehicleNumber = vehicleNumber;
+     this.ownerName = ownerName;
+     this.vehicleType = vehicleType;
+     this.serviceType = serviceType;
+     this.serviceCost = serviceCost;
+     this.serviceStatus = serviceStatus;
+ }
+
+ @Override
+ public String toString() {
+     return String.format("ID: %-6s | Vehicle: %-12s | Owner: %-10s | Type: %-5s | Service: %-15s | Cost: Rs.%-8.2f | Status: %s",
+             serviceId, vehicleNumber, ownerName, vehicleType, serviceType, serviceCost, serviceStatus);
+ }
+}
+
+class VehicleServiceManagement {
+ private static ArrayList<VehicleService> serviceList = new ArrayList<>();
+ private static Scanner sc = new Scanner(System.in);
+
+ public static void addService() {
+     System.out.print("Enter Service ID: ");
+     String id = sc.nextLine().trim();
+     for (VehicleService vs : serviceList) {
+         if (vs.serviceId.equalsIgnoreCase(id)) {
+             System.out.println("Error: Service ID already exists! Must be unique.");
+             return;
+         }
+     }
+     System.out.print("Enter Vehicle Number: ");
+     String vNum = sc.nextLine().trim();
+     System.out.print("Enter Owner Name: ");
+     String owner = sc.nextLine().trim();
+     System.out.print("Enter Vehicle Type (Bike / Car / SUV): ");
+     String vType = sc.nextLine().trim();
+     System.out.print("Enter Service Type (General Service / Oil Change / Repair / Full Service): ");
+     String sType = sc.nextLine().trim();
+     System.out.print("Enter Service Cost: ");
+     double cost = Double.parseDouble(sc.nextLine().trim());
+     System.out.print("Enter Service Status (Pending / In Progress / Completed): ");
+     String status = sc.nextLine().trim();
+
+     serviceList.add(new VehicleService(id, vNum, owner, vType, sType, cost, status));
+     System.out.println("Service record added successfully.");
+ }
+
+ public static void displayAllServices() {
+     if (serviceList.isEmpty()) {
+         System.out.println("No service records available.");
+         return;
+     }
+     System.out.println("\n----- ALL VEHICLE SERVICE RECORDS -----");
+     for (VehicleService vs : serviceList) {
+         System.out.println(vs);
+     }
+ }
+
+ public static void searchByVehicleNumber() {
+     System.out.print("Enter Vehicle Number to search: ");
+     String vNum = sc.nextLine().trim();
+     boolean found = false;
+     for (VehicleService vs : serviceList) {
+         if (vs.vehicleNumber.equalsIgnoreCase(vNum)) {
+             System.out.println("Record Found: " + vs);
+             found = true;
+         }
+     }
+     if (!found) {
+         System.out.println("No service record found for Vehicle Number: " + vNum);
+     }
+ }
+
+ public static void updateService() {
+     System.out.print("Enter Service ID to update: ");
+     String id = sc.nextLine().trim();
+     for (VehicleService vs : serviceList) {
+         if (vs.serviceId.equalsIgnoreCase(id)) {
+             System.out.print("Enter New Service Type: ");
+             vs.serviceType = sc.nextLine().trim();
+             System.out.print("Enter New Service Cost: ");
+             vs.serviceCost = Double.parseDouble(sc.nextLine().trim());
+             System.out.print("Enter New Service Status (Pending / In Progress / Completed): ");
+             vs.serviceStatus = sc.nextLine().trim();
+             System.out.println("Service record updated successfully.");
+             return;
+         }
+     }
+     System.out.println("Service ID " + id + " does not exist.");
+ }
+
+ public static void removeService() {
+     System.out.print("Enter Service ID to remove: ");
+     String id = sc.nextLine().trim();
+     for (int i = 0; i < serviceList.size(); i++) {
+         if (serviceList.get(i).serviceId.equalsIgnoreCase(id)) {
+             serviceList.remove(i);
+             System.out.println("Service record removed successfully.");
+             return;
+         }
+     }
+     System.out.println("Service record not found.");
+ }
+
+ public static void sortByServiceCost() {
+     if (serviceList.isEmpty()) {
+         System.out.println("No records to sort.");
+         return;
+     }
+     Collections.sort(serviceList, new Comparator<VehicleService>() {
+         @Override
+         public int compare(VehicleService v1, VehicleService v2) {
+             return Double.compare(v2.serviceCost, v1.serviceCost); // Descending order
+         }
+     });
+     System.out.println("\n--- Sorted by Service Cost (Descending) ---");
+     displayAllServices();
+ }
+
+ public static void generateServiceReport() {
+     if (serviceList.isEmpty()) {
+         System.out.println("No service records available to generate report.");
+         return;
+     }
+     double totalCompletedRevenue = 0.0;
+     VehicleService highestCostService = serviceList.get(0);
+
+     for (VehicleService vs : serviceList) {
+         if (vs.serviceStatus.equalsIgnoreCase("Completed")) {
+             totalCompletedRevenue += vs.serviceCost;
+         }
+         if (vs.serviceCost > highestCostService.serviceCost) {
+             highestCostService = vs;
+         }
+     }
+
+     System.out.println("\n===== VEHICLE SERVICE REPORT =====");
+     System.out.println("Total Revenue (Completed Services) : Rs. " + totalCompletedRevenue);
+     System.out.println("Vehicle with Highest Service Cost  : " + highestCostService.vehicleNumber
+             + " (Rs. " + highestCostService.serviceCost + ")");
+ }
+
+ public static void main(String[] args) {
+     while (true) {
+         System.out.println("\n===== VEHICLE SERVICE MANAGEMENT (AXIS) =====");
+         System.out.println("1. Add Service Record");
+         System.out.println("2. Display All Services");
+         System.out.println("3. Search by Vehicle Number");
+         System.out.println("4. Update Service Record");
+         System.out.println("5. Remove Service Record");
+         System.out.println("6. Sort by Service Cost (Descending)");
+         System.out.println("7. Generate Service Report");
+         System.out.println("8. Exit");
+         System.out.print("Enter choice: ");
+         int choice = Integer.parseInt(sc.nextLine().trim());
+
+         switch (choice) {
+             case 1: addService(); break;
+             case 2: displayAllServices(); break;
+             case 3: searchByVehicleNumber(); break;
+             case 4: updateService(); break;
+             case 5: removeService(); break;
+             case 6: sortByServiceCost(); break;
+             case 7: generateServiceReport(); break;
+             case 8: System.out.println("Exiting..."); return;
+             default: System.out.println("Invalid choice!");
+         }
+     }
+ }
+}
+
+
+//============================================================================
+//[EXAM-B1-ICICI] Batch 1 File Handling Lab Exam - Question Code: ICICI
+//Problem: Courier Package Management System
+//Topics: Serializable, ObjectInputStream, ObjectOutputStream, Persistent File CRUD
+//Required Imports for this question:
+//import java.io.Serializable;
+//import java.io.File;
+//import java.io.FileInputStream;
+//import java.io.FileOutputStream;
+//import java.io.ObjectInputStream;
+//import java.io.ObjectOutputStream;
+//import java.io.IOException;
+//import java.util.ArrayList;
+//import java.util.Scanner;
+//============================================================================
+class CourierPackage implements Serializable {
+ private static final long serialVersionUID = 1L;
+ String packageId;
+ String senderName;
+ String receiverName;
+ String source;
+ String destination;
+ double packageWeight;
+ double deliveryCharge;
+ String deliveryStatus; // Booked / In Transit / Delivered / Cancelled
+
+ public CourierPackage(String packageId, String senderName, String receiverName,
+                       String source, String destination, double packageWeight,
+                       double deliveryCharge, String deliveryStatus) {
+     this.packageId = packageId;
+     this.senderName = senderName;
+     this.receiverName = receiverName;
+     this.source = source;
+     this.destination = destination;
+     this.packageWeight = packageWeight;
+     this.deliveryCharge = deliveryCharge;
+     this.deliveryStatus = deliveryStatus;
+ }
+
+ public void displayPackageDetails() {
+     System.out.printf("ID: %-5s | Sender: %-8s | Receiver: %-8s | %s -> %s | Wt: %.1fkg | Charge: Rs.%.2f | Status: %s%n",
+             packageId, senderName, receiverName, source, destination, packageWeight, deliveryCharge, deliveryStatus);
+ }
+}
+
+class CourierManagement {
+ private static final String FILE_NAME = "courier_packages.dat";
+ private static Scanner sc = new Scanner(System.in);
+
+ @SuppressWarnings("unchecked")
+ private static ArrayList<CourierPackage> readPackagesFromFile() {
+     File file = new File(FILE_NAME);
+     if (!file.exists()) return new ArrayList<>();
+     try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file))) {
+         return (ArrayList<CourierPackage>) ois.readObject();
+     } catch (IOException | ClassNotFoundException e) {
+         return new ArrayList<>();
+     }
+ }
+
+ private static void writePackagesToFile(ArrayList<CourierPackage> list) {
+     try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FILE_NAME))) {
+         oos.writeObject(list);
+     } catch (IOException e) {
+         System.out.println("Error writing to file: " + e.getMessage());
+     }
+ }
+
+ public static void addPackage() {
+     ArrayList<CourierPackage> list = readPackagesFromFile();
+     System.out.print("Enter Package ID (e.g., P101): ");
+     String id = sc.nextLine().trim();
+     for (CourierPackage cp : list) {
+         if (cp.packageId.equalsIgnoreCase(id)) {
+             System.out.println("Error: Package ID already exists!");
+             return;
+         }
+     }
+     System.out.print("Enter Sender Name: ");
+     String sender = sc.nextLine().trim();
+     System.out.print("Enter Receiver Name: ");
+     String receiver = sc.nextLine().trim();
+     System.out.print("Enter Source: ");
+     String src = sc.nextLine().trim();
+     System.out.print("Enter Destination: ");
+     String dest = sc.nextLine().trim();
+     System.out.print("Enter Weight (kg): ");
+     double wt = Double.parseDouble(sc.nextLine().trim());
+     System.out.print("Enter Delivery Charge: ");
+     double charge = Double.parseDouble(sc.nextLine().trim());
+     System.out.print("Enter Status (Booked / In Transit / Delivered / Cancelled): ");
+     String status = sc.nextLine().trim();
+
+     list.add(new CourierPackage(id, sender, receiver, src, dest, wt, charge, status));
+     writePackagesToFile(list);
+     System.out.println("Courier Package saved to file successfully.");
+ }
+
+ public static void displayAllPackages() {
+     ArrayList<CourierPackage> list = readPackagesFromFile();
+     if (list.isEmpty()) {
+         System.out.println("No courier package records found in file.");
+         return;
+     }
+     System.out.println("\n----- ALL COURIER PACKAGES -----");
+     for (CourierPackage cp : list) {
+         cp.displayPackageDetails();
+     }
+ }
+
+ public static void searchPackage() {
+     ArrayList<CourierPackage> list = readPackagesFromFile();
+     System.out.print("Enter Package ID to search: ");
+     String id = sc.nextLine().trim();
+     for (CourierPackage cp : list) {
+         if (cp.packageId.equalsIgnoreCase(id)) {
+             cp.displayPackageDetails();
+             return;
+         }
+     }
+     System.out.println("Package not found.");
+ }
+
+ public static void updatePackage() {
+     ArrayList<CourierPackage> list = readPackagesFromFile();
+     System.out.print("Enter Package ID to update: ");
+     String id = sc.nextLine().trim();
+     for (CourierPackage cp : list) {
+         if (cp.packageId.equalsIgnoreCase(id)) {
+             System.out.print("Enter New Destination: ");
+             cp.destination = sc.nextLine().trim();
+             System.out.print("Enter New Delivery Charge: ");
+             cp.deliveryCharge = Double.parseDouble(sc.nextLine().trim());
+             System.out.print("Enter New Delivery Status (Booked / In Transit / Delivered / Cancelled): ");
+             cp.deliveryStatus = sc.nextLine().trim();
+             writePackagesToFile(list);
+             System.out.println("Package updated and saved to file.");
+             return;
+         }
+     }
+     System.out.println("Package ID does not exist.");
+ }
+
+ public static void deletePackage() {
+     ArrayList<CourierPackage> list = readPackagesFromFile();
+     System.out.print("Enter Package ID to delete: ");
+     String id = sc.nextLine().trim();
+     for (int i = 0; i < list.size(); i++) {
+         if (list.get(i).packageId.equalsIgnoreCase(id)) {
+             list.remove(i);
+             writePackagesToFile(list);
+             System.out.println("Package deleted from file successfully.");
+             return;
+         }
+     }
+     System.out.println("Package not found.");
+ }
+
+ public static void generateDeliveryReport() {
+     ArrayList<CourierPackage> list = readPackagesFromFile();
+     if (list.isEmpty()) {
+         System.out.println("No packages in file to generate report.");
+         return;
+     }
+     int deliveredCount = 0;
+     double totalDeliveredRevenue = 0.0;
+     CourierPackage highestPkg = list.get(0);
+
+     for (CourierPackage cp : list) {
+         if (cp.deliveryStatus.equalsIgnoreCase("Delivered")) {
+             deliveredCount++;
+             totalDeliveredRevenue += cp.deliveryCharge;
+         }
+         if (cp.deliveryCharge > highestPkg.deliveryCharge) {
+             highestPkg = cp;
+         }
+     }
+
+     System.out.println("\n===== DELIVERY REPORT =====");
+     System.out.println("Delivered Packages      : " + deliveredCount);
+     System.out.println("Total Delivery Revenue  : Rs. " + totalDeliveredRevenue);
+     System.out.println("Highest Charge Package  : " + highestPkg.packageId);
+     System.out.println("Highest Delivery Charge : Rs. " + highestPkg.deliveryCharge);
+ }
+
+ public static void main(String[] args) {
+     while (true) {
+         System.out.println("\n=== COURIER PACKAGE MANAGEMENT ===");
+         System.out.println("1. Add Package");
+         System.out.println("2. Display All Packages");
+         System.out.println("3. Search Package");
+         System.out.println("4. Update Package");
+         System.out.println("5. Delete Package");
+         System.out.println("6. Generate Delivery Report");
+         System.out.println("7. Exit");
+         System.out.print("Enter choice: ");
+         int choice = Integer.parseInt(sc.nextLine().trim());
+
+         switch (choice) {
+             case 1: addPackage(); break;
+             case 2: displayAllPackages(); break;
+             case 3: searchPackage(); break;
+             case 4: updatePackage(); break;
+             case 5: deletePackage(); break;
+             case 6: generateDeliveryReport(); break;
+             case 7: System.out.println("Exiting..."); return;
+             default: System.out.println("Invalid option!");
+         }
+     }
+ }
+}
+
+
+//============================================================================
+//[EXAM-B1-SBI] Batch 1 JDBC Lab Exam - Question Code: SBI
+//Problem: Vehicle Rental Management System (Database: vehicle_rental, Table: vehicle)
+//Topics: JDBC Connection, PreparedStatement, ResultSet, Unique Vehicle Number Check
+//Required Imports for this question:
+//import java.sql.Connection;
+//import java.sql.DriverManager;
+//import java.sql.PreparedStatement;
+//import java.sql.ResultSet;
+//import java.sql.Statement;
+//import java.sql.SQLException;
+//import java.util.Scanner;
+//External JAR Dependency: mysql-connector-j.jar (Build Path -> Configure Build Path)
+//============================================================================
+class VehicleRentalManagement {
+ private static final String BASE_URL = "jdbc:mysql://localhost:3306/";
+ private static final String DB_URL = "jdbc:mysql://localhost:3306/vehicle_rental";
+ private static final String USER = "root";
+ private static final String PASS = "root"; // Update with your MySQL password
+ private static Scanner sc = new Scanner(System.in);
+
+ public static void initializeDatabase() {
+     try (Connection conn = DriverManager.getConnection(BASE_URL, USER, PASS);
+          Statement stmt = conn.createStatement()) {
+         stmt.executeUpdate("CREATE DATABASE IF NOT EXISTS vehicle_rental");
+         stmt.executeUpdate("USE vehicle_rental");
+         stmt.executeUpdate("CREATE TABLE IF NOT EXISTS vehicle ("
+                 + "vehicle_id INT PRIMARY KEY, "
+                 + "vehicle_number VARCHAR(20) UNIQUE, "
+                 + "vehicle_model VARCHAR(50), "
+                 + "vehicle_type VARCHAR(30), "
+                 + "rental_rate DOUBLE, "
+                 + "available_days INT, "
+                 + "status VARCHAR(20))");
+     } catch (SQLException e) {
+         System.out.println("DB Init Notice: " + e.getMessage());
+     }
+ }
+
+ public static void addVehicle() {
+     try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS)) {
+         System.out.print("Enter Vehicle ID: ");
+         int id = Integer.parseInt(sc.nextLine().trim());
+         System.out.print("Enter Vehicle Number: ");
+         String vNum = sc.nextLine().trim();
+
+         // Check if vehicle_number is already registered
+         String checkSql = "SELECT COUNT(*) FROM vehicle WHERE vehicle_number = ?";
+         try (PreparedStatement checkStmt = conn.prepareStatement(checkSql)) {
+             checkStmt.setString(1, vNum);
+             ResultSet rs = checkStmt.executeQuery();
+             if (rs.next() && rs.getInt(1) > 0) {
+                 System.out.println("Error: Vehicle number " + vNum + " is already registered!");
+                 return;
+             }
+         }
+
+         System.out.print("Enter Vehicle Model: ");
+         String model = sc.nextLine().trim();
+         System.out.print("Enter Vehicle Type (Car / Bike / SUV): ");
+         String type = sc.nextLine().trim();
+         System.out.print("Enter Rental Rate per Day: ");
+         double rate = Double.parseDouble(sc.nextLine().trim());
+         System.out.print("Enter Available Days: ");
+         int days = Integer.parseInt(sc.nextLine().trim());
+         System.out.print("Enter Status (Available / Rented): ");
+         String status = sc.nextLine().trim();
+
+         String insertSql = "INSERT INTO vehicle VALUES (?, ?, ?, ?, ?, ?, ?)";
+         try (PreparedStatement pstmt = conn.prepareStatement(insertSql)) {
+             pstmt.setInt(1, id);
+             pstmt.setString(2, vNum);
+             pstmt.setString(3, model);
+             pstmt.setString(4, type);
+             pstmt.setDouble(5, rate);
+             pstmt.setInt(6, days);
+             pstmt.setString(7, status);
+             pstmt.executeUpdate();
+             System.out.println("Vehicle added successfully!");
+         }
+     } catch (SQLException e) {
+         System.out.println("Insert Error: " + e.getMessage());
+     }
+ }
+
+ public static void updateVehicle() {
+     try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS)) {
+         System.out.print("Enter Vehicle ID to update: ");
+         int id = Integer.parseInt(sc.nextLine().trim());
+
+         System.out.print("Enter New Vehicle Model: ");
+         String model = sc.nextLine().trim();
+         System.out.print("Enter New Rental Rate: ");
+         double rate = Double.parseDouble(sc.nextLine().trim());
+         System.out.print("Enter New Available Days: ");
+         int days = Integer.parseInt(sc.nextLine().trim());
+         System.out.print("Enter New Status (Available / Rented): ");
+         String status = sc.nextLine().trim();
+
+         String sql = "UPDATE vehicle SET vehicle_model=?, rental_rate=?, available_days=?, status=? WHERE vehicle_id=?";
+         try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
+             pstmt.setString(1, model);
+             pstmt.setDouble(2, rate);
+             pstmt.setInt(3, days);
+             pstmt.setString(4, status);
+             pstmt.setInt(5, id);
+             int rows = pstmt.executeUpdate();
+             if (rows > 0) System.out.println("Vehicle updated successfully.");
+             else System.out.println("Vehicle ID " + id + " does not exist.");
+         }
+     } catch (SQLException e) {
+         System.out.println("Update Error: " + e.getMessage());
+     }
+ }
+
+ public static void deleteVehicle() {
+     try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS)) {
+         System.out.print("Enter Vehicle ID to delete: ");
+         int id = Integer.parseInt(sc.nextLine().trim());
+         String sql = "DELETE FROM vehicle WHERE vehicle_id = ?";
+         try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
+             pstmt.setInt(1, id);
+             int rows = pstmt.executeUpdate();
+             if (rows > 0) System.out.println("Vehicle deleted successfully.");
+             else System.out.println("Vehicle not found.");
+         }
+     } catch (SQLException e) {
+         System.out.println("Delete Error: " + e.getMessage());
+     }
+ }
+
+ public static void findVehicleById() {
+     try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS)) {
+         System.out.print("Enter Vehicle ID to search: ");
+         int id = Integer.parseInt(sc.nextLine().trim());
+         String sql = "SELECT * FROM vehicle WHERE vehicle_id = ?";
+         try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
+             pstmt.setInt(1, id);
+             ResultSet rs = pstmt.executeQuery();
+             if (rs.next()) {
+                 System.out.printf("ID: %d | No: %s | Model: %s | Type: %s | Rate: Rs.%.2f | Days: %d | Status: %s%n",
+                         rs.getInt("vehicle_id"), rs.getString("vehicle_number"),
+                         rs.getString("vehicle_model"), rs.getString("vehicle_type"),
+                         rs.getDouble("rental_rate"), rs.getInt("available_days"),
+                         rs.getString("status"));
+             } else {
+                 System.out.println("No record exists for Vehicle ID: " + id);
+             }
+         }
+     } catch (SQLException e) {
+         System.out.println("Search Error: " + e.getMessage());
+     }
+ }
+
+ public static void displayAllVehicles() {
+     try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
+          PreparedStatement pstmt = conn.prepareStatement("SELECT * FROM vehicle");
+          ResultSet rs = pstmt.executeQuery()) {
+         System.out.println("\n--------------------------------------------------------------------------------");
+         System.out.printf("%-6s %-14s %-15s %-8s %-10s %-8s %-12s%n",
+                 "ID", "Vehicle No", "Model", "Type", "Rate", "Days", "Status");
+         System.out.println("--------------------------------------------------------------------------------");
+         while (rs.next()) {
+             System.out.printf("%-6d %-14s %-15s %-8s %-10.2f %-8d %-12s%n",
+                     rs.getInt("vehicle_id"), rs.getString("vehicle_number"),
+                     rs.getString("vehicle_model"), rs.getString("vehicle_type"),
+                     rs.getDouble("rental_rate"), rs.getInt("available_days"),
+                     rs.getString("status"));
+         }
+     } catch (SQLException e) {
+         System.out.println("Display Error: " + e.getMessage());
+     }
+ }
+
+ public static void calculateRentalEstimate() {
+     try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS)) {
+         System.out.print("Enter Vehicle ID for Rental Estimate: ");
+         int id = Integer.parseInt(sc.nextLine().trim());
+         String sql = "SELECT * FROM vehicle WHERE vehicle_id = ?";
+         try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
+             pstmt.setInt(1, id);
+             ResultSet rs = pstmt.executeQuery();
+             if (rs.next()) {
+                 double rate = rs.getDouble("rental_rate");
+                 int days = rs.getInt("available_days");
+                 double estimate = rate * days;
+                 System.out.println("Vehicle: " + rs.getString("vehicle_model")
+                         + " (" + rs.getString("vehicle_number") + ")");
+                 System.out.println("Rate: Rs." + rate + " x " + days + " days = Total Estimate: Rs." + estimate);
+             } else {
+                 System.out.println("Vehicle not found.");
+             }
+         }
+     } catch (SQLException e) {
+         System.out.println("Calculation Error: " + e.getMessage());
+     }
+ }
+
+ public static void main(String[] args) {
+     initializeDatabase();
+     while (true) {
+         System.out.println("\n===== VEHICLE RENTAL MANAGEMENT =====");
+         System.out.println("1. Add Vehicle");
+         System.out.println("2. Update Vehicle");
+         System.out.println("3. Delete Vehicle");
+         System.out.println("4. Find Vehicle by ID");
+         System.out.println("5. Display All Vehicles");
+         System.out.println("6. Calculate Rental Estimate");
+         System.out.println("7. Exit");
+         System.out.print("Enter choice: ");
+         int choice = Integer.parseInt(sc.nextLine().trim());
+
+         switch (choice) {
+             case 1: addVehicle(); break;
+             case 2: updateVehicle(); break;
+             case 3: deleteVehicle(); break;
+             case 4: findVehicleById(); break;
+             case 5: displayAllVehicles(); break;
+             case 6: calculateRentalEstimate(); break;
+             case 7: System.out.println("Exiting..."); return;
+             default: System.out.println("Invalid option!");
+         }
+     }
+ }
+}
+
+
+//############################################################################
+//BATCH 2 LAB EXAM SOLUTIONS (CODES: BOB, IOB, PNB, CUB)
+//############################################################################
+
+//============================================================================
+//[EXAM-B2-BOB] Batch 2 OOP Lab Exam - Question Code: BOB
+//Problem: Travel Package Management System (DomesticPackage & InternationalPackage)
+//Topics: Abstract Class, Inheritance, Method Overriding, Interface, static Counter
+//Required Imports for this question:
+//(None - uses default java.lang package. Uses DiscountApplicable interface declared above)
+//============================================================================
+abstract class TravelPackage {
+ String packageId;
+ String customerName;
+ String destination;
+ int numberOfDays;
+ int numberOfPersons;
+ static int totalPackages = 0;
+
+ public TravelPackage(String packageId, String customerName, String destination, int numberOfDays, int numberOfPersons) {
+     this.packageId = packageId;
+     this.customerName = customerName;
+     this.destination = destination;
+     this.numberOfDays = numberOfDays;
+     this.numberOfPersons = numberOfPersons;
+     totalPackages++;
+ }
+
+ public void displayPackageDetails() {
+     System.out.println("Package ID        : " + packageId);
+     System.out.println("Customer Name     : " + customerName);
+     System.out.println("Destination       : " + destination);
+     System.out.println("Number of Days    : " + numberOfDays);
+     System.out.println("Number of Persons : " + numberOfPersons);
+ }
+
+ public abstract double calculateCost();
+}
+
+class DomesticPackage extends TravelPackage implements DiscountApplicable {
+ String hotelName;
+ String transportMode;
+ String mealPlan;
+ double costPerPerson;
+
+ public DomesticPackage(String packageId, String customerName, String destination, int numberOfDays,
+                        int numberOfPersons, String hotelName, String transportMode, String mealPlan, double costPerPerson) {
+     super(packageId, customerName, destination, numberOfDays, numberOfPersons);
+     this.hotelName = hotelName;
+     this.transportMode = transportMode;
+     this.mealPlan = mealPlan;
+     this.costPerPerson = costPerPerson;
+ }
+
+ @Override
+ public double calculateCost() {
+     return costPerPerson * numberOfPersons;
+ }
+
+ @Override
+ public double calculateDiscount(double cost) {
+     if (numberOfPersons >= 4) {
+         return cost * 0.10; // 10% discount if 4 or more persons
+     }
+     return 0.0;
+ }
+
+ public void displayFullPackage() {
+     System.out.println("\n----- DOMESTIC PACKAGE DETAILS -----");
+     super.displayPackageDetails();
+     System.out.println("Hotel Name        : " + hotelName);
+     System.out.println("Transport Mode    : " + transportMode);
+     System.out.println("Meal Plan         : " + mealPlan);
+     System.out.println("Cost Per Person   : Rs. " + costPerPerson);
+     double totalCost = calculateCost();
+     double discount = calculateDiscount(totalCost);
+     double finalPayable = totalCost - discount;
+     System.out.println("Total Cost        : Rs. " + totalCost);
+     System.out.println("Discount          : Rs. " + discount);
+     System.out.println("Final Payable Amt : Rs. " + finalPayable);
+ }
+}
+
+class InternationalPackage extends TravelPackage implements DiscountApplicable {
+ String hotelName;
+ String flightClass;
+ boolean visaRequired;
+ double costPerPerson;
+
+ public InternationalPackage(String packageId, String customerName, String destination, int numberOfDays,
+                             int numberOfPersons, String hotelName, String flightClass, boolean visaRequired, double costPerPerson) {
+     super(packageId, customerName, destination, numberOfDays, numberOfPersons);
+     this.hotelName = hotelName;
+     this.flightClass = flightClass;
+     this.visaRequired = visaRequired;
+     this.costPerPerson = costPerPerson;
+ }
+
+ @Override
+ public double calculateCost() {
+     return costPerPerson * numberOfPersons;
+ }
+
+ @Override
+ public double calculateDiscount(double cost) {
+     if (numberOfPersons >= 3) {
+         return cost * 0.07; // 7% discount if 3 or more persons
+     }
+     return 0.0;
+ }
+
+ public void displayFullPackage() {
+     System.out.println("\n----- INTERNATIONAL PACKAGE DETAILS -----");
+     super.displayPackageDetails();
+     System.out.println("Hotel Name        : " + hotelName);
+     System.out.println("Flight Class      : " + flightClass);
+     System.out.println("Visa Required     : " + (visaRequired ? "Yes" : "No"));
+     System.out.println("Cost Per Person   : Rs. " + costPerPerson);
+     double totalCost = calculateCost();
+     double discount = calculateDiscount(totalCost);
+     double finalPayable = totalCost - discount;
+     System.out.println("Total Cost        : Rs. " + totalCost);
+     System.out.println("Discount          : Rs. " + discount);
+     System.out.println("Final Payable Amt : Rs. " + finalPayable);
+ }
+}
+
+class TravelPackageDemo {
+ public static void main(String[] args) {
+     DomesticPackage d1 = new DomesticPackage("DOM101", "Ramesh Gupta", "Goa", 5, 4,
+             "Taj Exotica", "Flight", "MAP (Breakfast & Dinner)", 18000.0);
+     DomesticPackage d2 = new DomesticPackage("DOM102", "Anita Desai", "Manali", 6, 2,
+             "Snow Valley Resort", "Volvo Bus", "CP (Breakfast Only)", 12500.0);
+
+     InternationalPackage i1 = new InternationalPackage("INT201", "Vikramaditya", "Dubai", 5, 3,
+             "Atlantis The Palm", "Business", true, 85000.0);
+     InternationalPackage i2 = new InternationalPackage("INT202", "Neha Kulkarni", "Thailand", 7, 2,
+             "Phuket Marriott", "Economy", false, 55000.0);
+
+     d1.displayFullPackage();
+     d2.displayFullPackage();
+     i1.displayFullPackage();
+     i2.displayFullPackage();
+
+     System.out.println("\n==========================================");
+     System.out.println("Total Packages Created: " + TravelPackage.totalPackages);
+     System.out.println("==========================================");
+ }
+}
+
+
+//============================================================================
+//[EXAM-B2-IOB] Batch 2 ArrayList Lab Exam - Question Code: IOB
+//Problem: Vehicle Rental Management System (ArrayList<VehicleRental>)
+//Topics: ArrayList CRUD, Unique ID, Descending Comparator Sort, Revenue Report
+//Required Imports for this question:
+//import java.util.ArrayList;
+//import java.util.Collections;
+//import java.util.Comparator;
+//import java.util.Scanner;
+//============================================================================
+class VehicleRental {
+ String rentalId;
+ String vehicleNumber;
+ String customerName;
+ String vehicleType;  // Car / Bike / SUV
+ String rentalType;   // Daily / Weekly / Monthly / Long Term
+ double rentalCost;
+ String rentalStatus; // Reserved / Active / Completed / Cancelled
+
+ public VehicleRental(String rentalId, String vehicleNumber, String customerName,
+                      String vehicleType, String rentalType, double rentalCost, String rentalStatus) {
+     this.rentalId = rentalId;
+     this.vehicleNumber = vehicleNumber;
+     this.customerName = customerName;
+     this.vehicleType = vehicleType;
+     this.rentalType = rentalType;
+     this.rentalCost = rentalCost;
+     this.rentalStatus = rentalStatus;
+ }
+
+ @Override
+ public String toString() {
+     return String.format("ID: %-6s | Vehicle: %-12s | Customer: %-10s | Type: %-5s | Plan: %-10s | Cost: Rs.%-8.2f | Status: %s",
+             rentalId, vehicleNumber, customerName, vehicleType, rentalType, rentalCost, rentalStatus);
+ }
+}
+
+class VehicleRentalArrayListApp {
+ private static ArrayList<VehicleRental> rentalList = new ArrayList<>();
+ private static Scanner sc = new Scanner(System.in);
+
+ public static void addRental() {
+     System.out.print("Enter Rental ID: ");
+     String id = sc.nextLine().trim();
+     for (VehicleRental vr : rentalList) {
+         if (vr.rentalId.equalsIgnoreCase(id)) {
+             System.out.println("Error: Rental ID must be unique!");
+             return;
+         }
+     }
+     System.out.print("Enter Vehicle Number: ");
+     String vNum = sc.nextLine().trim();
+     System.out.print("Enter Customer Name: ");
+     String cust = sc.nextLine().trim();
+     System.out.print("Enter Vehicle Type (Car / Bike / SUV): ");
+     String vType = sc.nextLine().trim();
+     System.out.print("Enter Rental Type (Daily / Weekly / Monthly / Long Term): ");
+     String rType = sc.nextLine().trim();
+     System.out.print("Enter Rental Cost: ");
+     double cost = Double.parseDouble(sc.nextLine().trim());
+     System.out.print("Enter Rental Status (Reserved / Active / Completed / Cancelled): ");
+     String status = sc.nextLine().trim();
+
+     rentalList.add(new VehicleRental(id, vNum, cust, vType, rType, cost, status));
+     System.out.println("Rental record added successfully.");
+ }
+
+ public static void displayAllRentals() {
+     if (rentalList.isEmpty()) {
+         System.out.println("No rental records found.");
+         return;
+     }
+     System.out.println("\n----- ALL VEHICLE RENTAL RECORDS -----");
+     for (VehicleRental vr : rentalList) {
+         System.out.println(vr);
+     }
+ }
+
+ public static void searchByVehicleNumber() {
+     System.out.print("Enter Vehicle Number to search: ");
+     String vNum = sc.nextLine().trim();
+     boolean found = false;
+     for (VehicleRental vr : rentalList) {
+         if (vr.vehicleNumber.equalsIgnoreCase(vNum)) {
+             System.out.println(vr);
+             found = true;
+         }
+     }
+     if (!found) System.out.println("No rental record found for vehicle number: " + vNum);
+ }
+
+ public static void updateRental() {
+     System.out.print("Enter Rental ID to update: ");
+     String id = sc.nextLine().trim();
+     for (VehicleRental vr : rentalList) {
+         if (vr.rentalId.equalsIgnoreCase(id)) {
+             System.out.print("Enter New Rental Type (Daily / Weekly / Monthly / Long Term): ");
+             vr.rentalType = sc.nextLine().trim();
+             System.out.print("Enter New Rental Cost: ");
+             vr.rentalCost = Double.parseDouble(sc.nextLine().trim());
+             System.out.print("Enter New Rental Status (Reserved / Active / Completed / Cancelled): ");
+             vr.rentalStatus = sc.nextLine().trim();
+             System.out.println("Rental record updated successfully.");
+             return;
+         }
+     }
+     System.out.println("Rental ID does not exist.");
+ }
+
+ public static void removeRental() {
+     System.out.print("Enter Rental ID to remove: ");
+     String id = sc.nextLine().trim();
+     for (int i = 0; i < rentalList.size(); i++) {
+         if (rentalList.get(i).rentalId.equalsIgnoreCase(id)) {
+             rentalList.remove(i);
+             System.out.println("Rental record removed successfully.");
+             return;
+         }
+     }
+     System.out.println("Rental record not found.");
+ }
+
+ public static void sortByRentalCost() {
+     if (rentalList.isEmpty()) {
+         System.out.println("No records to sort.");
+         return;
+     }
+     Collections.sort(rentalList, new Comparator<VehicleRental>() {
+         @Override
+         public int compare(VehicleRental r1, VehicleRental r2) {
+             return Double.compare(r2.rentalCost, r1.rentalCost); // Descending order
+         }
+     });
+     System.out.println("\n--- Sorted by Rental Cost (Descending) ---");
+     displayAllRentals();
+ }
+
+ public static void generateRentalReport() {
+     if (rentalList.isEmpty()) {
+         System.out.println("No rental records available for report.");
+         return;
+     }
+     double completedRevenue = 0.0;
+     VehicleRental highestRental = rentalList.get(0);
+
+     for (VehicleRental vr : rentalList) {
+         if (vr.rentalStatus.equalsIgnoreCase("Completed")) {
+             completedRevenue += vr.rentalCost;
+         }
+         if (vr.rentalCost > highestRental.rentalCost) {
+             highestRental = vr;
+         }
+     }
+
+     System.out.println("\n===== VEHICLE RENTAL REPORT =====");
+     System.out.println("Total Revenue (Completed Rentals) : Rs. " + completedRevenue);
+     System.out.println("Vehicle with Highest Rental Cost  : " + highestRental.vehicleNumber
+             + " (Rs. " + highestRental.rentalCost + ")");
+ }
+
+ public static void main(String[] args) {
+     while (true) {
+         System.out.println("\n===== VEHICLE RENTAL MANAGEMENT (IOB - ArrayList) =====");
+         System.out.println("1. Add Rental");
+         System.out.println("2. Display All Rentals");
+         System.out.println("3. Search by Vehicle Number");
+         System.out.println("4. Update Rental");
+         System.out.println("5. Remove Rental");
+         System.out.println("6. Sort by Rental Cost (Descending)");
+         System.out.println("7. Generate Rental Report");
+         System.out.println("8. Exit");
+         System.out.print("Enter choice: ");
+         int choice = Integer.parseInt(sc.nextLine().trim());
+
+         switch (choice) {
+             case 1: addRental(); break;
+             case 2: displayAllRentals(); break;
+             case 3: searchByVehicleNumber(); break;
+             case 4: updateRental(); break;
+             case 5: removeRental(); break;
+             case 6: sortByRentalCost(); break;
+             case 7: generateRentalReport(); break;
+             case 8: System.out.println("Exiting..."); return;
+             default: System.out.println("Invalid choice!");
+         }
+     }
+ }
+}
+
+
+//============================================================================
+//[EXAM-B2-PNB] Batch 2 File Handling Lab Exam - Question Code: PNB
+//Problem: Movie Ticket Booking Management System
+//Topics: Serializable, ObjectInputStream, ObjectOutputStream, Revenue & Max Ticket Report
+//Required Imports for this question:
+//import java.io.Serializable;
+//import java.io.File;
+//import java.io.FileInputStream;
+//import java.io.FileOutputStream;
+//import java.io.ObjectInputStream;
+//import java.io.ObjectOutputStream;
+//import java.io.IOException;
+//import java.util.ArrayList;
+//import java.util.Scanner;
+//============================================================================
+class MovieTicket implements Serializable {
+ private static final long serialVersionUID = 1L;
+ String bookingId;
+ String customerName;
+ String movieName;
+ String theatreName;
+ String showTime;
+ int numberOfTickets;
+ double ticketPrice;
+ String bookingStatus; // Booked / Confirmed / Cancelled / Completed
+
+ public MovieTicket(String bookingId, String customerName, String movieName, String theatreName,
+                    String showTime, int numberOfTickets, double ticketPrice, String bookingStatus) {
+     this.bookingId = bookingId;
+     this.customerName = customerName;
+     this.movieName = movieName;
+     this.theatreName = theatreName;
+     this.showTime = showTime;
+     this.numberOfTickets = numberOfTickets;
+     this.ticketPrice = ticketPrice;
+     this.bookingStatus = bookingStatus;
+ }
+
+ public void displayBookingDetails() {
+     double totalAmt = numberOfTickets * ticketPrice;
+     System.out.printf("ID: %-5s | Cust: %-8s | Movie: %-16s | Theatre: %-11s | Show: %-8s | Tickets: %d | Price: Rs.%.0f | Total: Rs.%.0f | Status: %s%n",
+             bookingId, customerName, movieName, theatreName, showTime, numberOfTickets, ticketPrice, totalAmt, bookingStatus);
+ }
+}
+
+class MovieTicketManagement {
+ private static final String FILE_NAME = "movie_bookings.dat";
+ private static Scanner sc = new Scanner(System.in);
+
+ @SuppressWarnings("unchecked")
+ private static ArrayList<MovieTicket> readBookingsFromFile() {
+     File file = new File(FILE_NAME);
+     if (!file.exists()) return new ArrayList<>();
+     try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file))) {
+         return (ArrayList<MovieTicket>) ois.readObject();
+     } catch (IOException | ClassNotFoundException e) {
+         return new ArrayList<>();
+     }
+ }
+
+ private static void writeBookingsToFile(ArrayList<MovieTicket> list) {
+     try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FILE_NAME))) {
+         oos.writeObject(list);
+     } catch (IOException e) {
+         System.out.println("File Write Error: " + e.getMessage());
+     }
+ }
+
+ public static void addBooking() {
+     ArrayList<MovieTicket> list = readBookingsFromFile();
+     System.out.print("Enter Booking ID (e.g., B101): ");
+     String id = sc.nextLine().trim();
+     for (MovieTicket mt : list) {
+         if (mt.bookingId.equalsIgnoreCase(id)) {
+             System.out.println("Error: Booking ID must be unique!");
+             return;
+         }
+     }
+     System.out.print("Enter Customer Name: ");
+     String cust = sc.nextLine().trim();
+     System.out.print("Enter Movie Name: ");
+     String movie = sc.nextLine().trim();
+     System.out.print("Enter Theatre Name: ");
+     String theatre = sc.nextLine().trim();
+     System.out.print("Enter Show Time (e.g., 6:30 PM): ");
+     String time = sc.nextLine().trim();
+     System.out.print("Enter Number of Tickets: ");
+     int tickets = Integer.parseInt(sc.nextLine().trim());
+     System.out.print("Enter Ticket Price: ");
+     double price = Double.parseDouble(sc.nextLine().trim());
+     System.out.print("Enter Booking Status (Booked / Confirmed / Cancelled / Completed): ");
+     String status = sc.nextLine().trim();
+
+     list.add(new MovieTicket(id, cust, movie, theatre, time, tickets, price, status));
+     writeBookingsToFile(list);
+     System.out.println("Movie booking saved to file.");
+ }
+
+ public static void displayAllBookings() {
+     ArrayList<MovieTicket> list = readBookingsFromFile();
+     if (list.isEmpty()) {
+         System.out.println("No movie booking records found.");
+         return;
+     }
+     System.out.println("\n----- ALL MOVIE BOOKINGS -----");
+     for (MovieTicket mt : list) {
+         mt.displayBookingDetails();
+     }
+ }
+
+ public static void searchBooking() {
+     ArrayList<MovieTicket> list = readBookingsFromFile();
+     System.out.print("Enter Booking ID to search: ");
+     String id = sc.nextLine().trim();
+     for (MovieTicket mt : list) {
+         if (mt.bookingId.equalsIgnoreCase(id)) {
+             mt.displayBookingDetails();
+             return;
+         }
+     }
+     System.out.println("Booking not found.");
+ }
+
+ public static void updateBooking() {
+     ArrayList<MovieTicket> list = readBookingsFromFile();
+     System.out.print("Enter Booking ID to update: ");
+     String id = sc.nextLine().trim();
+     for (MovieTicket mt : list) {
+         if (mt.bookingId.equalsIgnoreCase(id)) {
+             System.out.print("Enter New Show Time: ");
+             mt.showTime = sc.nextLine().trim();
+             System.out.print("Enter New Number of Tickets: ");
+             mt.numberOfTickets = Integer.parseInt(sc.nextLine().trim());
+             System.out.print("Enter New Ticket Price: ");
+             mt.ticketPrice = Double.parseDouble(sc.nextLine().trim());
+             System.out.print("Enter New Booking Status (Booked / Confirmed / Cancelled / Completed): ");
+             mt.bookingStatus = sc.nextLine().trim();
+             writeBookingsToFile(list);
+             System.out.println("Booking updated successfully.");
+             return;
+         }
+     }
+     System.out.println("Booking ID does not exist.");
+ }
+
+ public static void deleteBooking() {
+     ArrayList<MovieTicket> list = readBookingsFromFile();
+     System.out.print("Enter Booking ID to delete: ");
+     String id = sc.nextLine().trim();
+     for (int i = 0; i < list.size(); i++) {
+         if (list.get(i).bookingId.equalsIgnoreCase(id)) {
+             list.remove(i);
+             writeBookingsToFile(list);
+             System.out.println("Booking deleted successfully.");
+             return;
+         }
+     }
+     System.out.println("Booking not found.");
+ }
+
+ public static void generateBookingReport() {
+     ArrayList<MovieTicket> list = readBookingsFromFile();
+     if (list.isEmpty()) {
+         System.out.println("No booking records available for report.");
+         return;
+     }
+     int confirmedCount = 0;
+     double confirmedRevenue = 0.0;
+     MovieTicket highestTicketBooking = list.get(0);
+
+     for (MovieTicket mt : list) {
+         if (mt.bookingStatus.equalsIgnoreCase("Confirmed")) {
+             confirmedCount++;
+             confirmedRevenue += (mt.numberOfTickets * mt.ticketPrice);
+         }
+         if (mt.numberOfTickets > highestTicketBooking.numberOfTickets) {
+             highestTicketBooking = mt;
+         }
+     }
+
+     System.out.println("\n===== MOVIE BOOKING REPORT =====");
+     System.out.println("Confirmed Bookings     : " + confirmedCount);
+     System.out.println("Total Booking Revenue  : Rs. " + confirmedRevenue);
+     System.out.println("Highest Ticket Booking : " + highestTicketBooking.bookingId);
+     System.out.println("Movie Name             : " + highestTicketBooking.movieName);
+     System.out.println("Number of Tickets      : " + highestTicketBooking.numberOfTickets);
+ }
+
+ public static void main(String[] args) {
+     while (true) {
+         System.out.println("\n===== MOVIE TICKET BOOKING MANAGEMENT =====");
+         System.out.println("1. Add Booking");
+         System.out.println("2. Display All Bookings");
+         System.out.println("3. Search Booking");
+         System.out.println("4. Update Booking");
+         System.out.println("5. Delete Booking");
+         System.out.println("6. Generate Booking Report");
+         System.out.println("7. Exit");
+         System.out.print("Enter choice: ");
+         int choice = Integer.parseInt(sc.nextLine().trim());
+
+         switch (choice) {
+             case 1: addBooking(); break;
+             case 2: displayAllBookings(); break;
+             case 3: searchBooking(); break;
+             case 4: updateBooking(); break;
+             case 5: deleteBooking(); break;
+             case 6: generateBookingReport(); break;
+             case 7: System.out.println("Exiting..."); return;
+             default: System.out.println("Invalid option!");
+         }
+     }
+ }
+}
+
+
+//============================================================================
+//[EXAM-B2-CUB] Batch 2 JDBC Lab Exam - Question Code: CUB
+//Problem: Hotel Reservation Management System (Database: hotel_reservation, Table: reservation)
+//Topics: JDBC PreparedStatement, ResultSet, Active Room Uniqueness Check, Bill Calculation
+//Required Imports for this question:
+//import java.sql.Connection;
+//import java.sql.DriverManager;
+//import java.sql.PreparedStatement;
+//import java.sql.ResultSet;
+//import java.sql.Statement;
+//import java.sql.SQLException;
+//import java.util.Scanner;
+//External JAR Dependency: mysql-connector-j.jar (Build Path -> Configure Build Path)
+//============================================================================
+class HotelReservationManagement {
+ private static final String BASE_URL = "jdbc:mysql://localhost:3306/";
+ private static final String DB_URL = "jdbc:mysql://localhost:3306/hotel_reservation";
+ private static final String USER = "root";
+ private static final String PASS = "root"; // Update with your MySQL password
+ private static Scanner sc = new Scanner(System.in);
+
+ public static void initializeDatabase() {
+     try (Connection conn = DriverManager.getConnection(BASE_URL, USER, PASS);
+          Statement stmt = conn.createStatement()) {
+         stmt.executeUpdate("CREATE DATABASE IF NOT EXISTS hotel_reservation");
+         stmt.executeUpdate("USE hotel_reservation");
+         stmt.executeUpdate("CREATE TABLE IF NOT EXISTS reservation ("
+                 + "reservation_id INT PRIMARY KEY, "
+                 + "guest_name VARCHAR(50), "
+                 + "room_number VARCHAR(10), "
+                 + "room_type VARCHAR(30), "
+                 + "stay_days INT, "
+                 + "room_rate DOUBLE, "
+                 + "status VARCHAR(20))");
+     } catch (SQLException e) {
+         System.out.println("DB Init Notice: " + e.getMessage());
+     }
+ }
+
+ public static void addReservation() {
+     try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS)) {
+         System.out.print("Enter Reservation ID: ");
+         int id = Integer.parseInt(sc.nextLine().trim());
+         System.out.print("Enter Guest Name: ");
+         String guest = sc.nextLine().trim();
+         System.out.print("Enter Room Number (e.g., R101): ");
+         String roomNo = sc.nextLine().trim();
+
+         // Check that room_number is not already registered for an active reservation (Reserved / Checked-In)
+         String checkSql = "SELECT COUNT(*) FROM reservation WHERE room_number = ? AND status IN ('Reserved', 'Checked-In')";
+         try (PreparedStatement checkStmt = conn.prepareStatement(checkSql)) {
+             checkStmt.setString(1, roomNo);
+             ResultSet rs = checkStmt.executeQuery();
+             if (rs.next() && rs.getInt(1) > 0) {
+                 System.out.println("Error: Room " + roomNo + " already has an active reservation!");
+                 return;
+             }
+         }
+
+         System.out.print("Enter Room Type (Standard / Deluxe / Suite): ");
+         String type = sc.nextLine().trim();
+         System.out.print("Enter Number of Stay Days: ");
+         int days = Integer.parseInt(sc.nextLine().trim());
+         System.out.print("Enter Room Rate per Day: ");
+         double rate = Double.parseDouble(sc.nextLine().trim());
+         System.out.print("Enter Status (Reserved / Checked-In / Checked-Out): ");
+         String status = sc.nextLine().trim();
+
+         String insertSql = "INSERT INTO reservation VALUES (?, ?, ?, ?, ?, ?, ?)";
+         try (PreparedStatement pstmt = conn.prepareStatement(insertSql)) {
+             pstmt.setInt(1, id);
+             pstmt.setString(2, guest);
+             pstmt.setString(3, roomNo);
+             pstmt.setString(4, type);
+             pstmt.setInt(5, days);
+             pstmt.setDouble(6, rate);
+             pstmt.setString(7, status);
+             pstmt.executeUpdate();
+             System.out.println("Reservation added successfully!");
+         }
+     } catch (SQLException e) {
+         System.out.println("Insert Error: " + e.getMessage());
+     }
+ }
+
+ public static void updateReservation() {
+     try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS)) {
+         System.out.print("Enter Reservation ID to update: ");
+         int id = Integer.parseInt(sc.nextLine().trim());
+         System.out.print("Enter New Room Type (Standard / Deluxe / Suite): ");
+         String type = sc.nextLine().trim();
+         System.out.print("Enter New Stay Days: ");
+         int days = Integer.parseInt(sc.nextLine().trim());
+         System.out.print("Enter New Room Rate: ");
+         double rate = Double.parseDouble(sc.nextLine().trim());
+         System.out.print("Enter New Status (Reserved / Checked-In / Checked-Out): ");
+         String status = sc.nextLine().trim();
+
+         String sql = "UPDATE reservation SET room_type=?, stay_days=?, room_rate=?, status=? WHERE reservation_id=?";
+         try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
+             pstmt.setString(1, type);
+             pstmt.setInt(2, days);
+             pstmt.setDouble(3, rate);
+             pstmt.setString(4, status);
+             pstmt.setInt(5, id);
+             int rows = pstmt.executeUpdate();
+             if (rows > 0) System.out.println("Reservation updated successfully.");
+             else System.out.println("Reservation ID " + id + " does not exist.");
+         }
+     } catch (SQLException e) {
+         System.out.println("Update Error: " + e.getMessage());
+     }
+ }
+
+ public static void deleteReservation() {
+     try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS)) {
+         System.out.print("Enter Reservation ID to delete: ");
+         int id = Integer.parseInt(sc.nextLine().trim());
+         String sql = "DELETE FROM reservation WHERE reservation_id = ?";
+         try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
+             pstmt.setInt(1, id);
+             int rows = pstmt.executeUpdate();
+             if (rows > 0) System.out.println("Reservation deleted successfully.");
+             else System.out.println("Reservation not found.");
+         }
+     } catch (SQLException e) {
+         System.out.println("Delete Error: " + e.getMessage());
+     }
+ }
+
+ public static void findReservationById() {
+     try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS)) {
+         System.out.print("Enter Reservation ID to find: ");
+         int id = Integer.parseInt(sc.nextLine().trim());
+         String sql = "SELECT * FROM reservation WHERE reservation_id = ?";
+         try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
+             pstmt.setInt(1, id);
+             ResultSet rs = pstmt.executeQuery();
+             if (rs.next()) {
+                 System.out.printf("ID: %d | Guest: %s | Room: %s | Type: %s | Days: %d | Rate: Rs.%.2f | Status: %s%n",
+                         rs.getInt("reservation_id"), rs.getString("guest_name"),
+                         rs.getString("room_number"), rs.getString("room_type"),
+                         rs.getInt("stay_days"), rs.getDouble("room_rate"),
+                         rs.getString("status"));
+             } else {
+                 System.out.println("No reservation found for ID: " + id);
+             }
+         }
+     } catch (SQLException e) {
+         System.out.println("Find Error: " + e.getMessage());
+     }
+ }
+
+ public static void displayAllReservations() {
+     try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
+          PreparedStatement pstmt = conn.prepareStatement("SELECT * FROM reservation");
+          ResultSet rs = pstmt.executeQuery()) {
+         System.out.println("\n--------------------------------------------------------------------------------");
+         System.out.printf("%-6s %-14s %-10s %-12s %-6s %-10s %-14s%n",
+                 "ID", "Guest Name", "Room No", "Room Type", "Days", "Rate", "Status");
+         System.out.println("--------------------------------------------------------------------------------");
+         while (rs.next()) {
+             System.out.printf("%-6d %-14s %-10s %-12s %-6d %-10.2f %-14s%n",
+                     rs.getInt("reservation_id"), rs.getString("guest_name"),
+                     rs.getString("room_number"), rs.getString("room_type"),
+                     rs.getInt("stay_days"), rs.getDouble("room_rate"),
+                     rs.getString("status"));
+         }
+     } catch (SQLException e) {
+         System.out.println("Display Error: " + e.getMessage());
+     }
+ }
+
+ public static void calculateBill() {
+     try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS)) {
+         System.out.print("Enter Reservation ID to calculate bill: ");
+         int id = Integer.parseInt(sc.nextLine().trim());
+         String sql = "SELECT * FROM reservation WHERE reservation_id = ?";
+         try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
+             pstmt.setInt(1, id);
+             ResultSet rs = pstmt.executeQuery();
+             if (rs.next()) {
+                 String guest = rs.getString("guest_name");
+                 String room = rs.getString("room_number");
+                 int days = rs.getInt("stay_days");
+                 double rate = rs.getDouble("room_rate");
+                 double totalBill = days * rate;
+
+                 System.out.println("\n----- HOTEL BILL -----");
+                 System.out.println("Guest Name     : " + guest);
+                 System.out.println("Room Number    : " + room);
+                 System.out.println("Number of Days : " + days);
+                 System.out.println("Room Rate/Day  : Rs. " + rate);
+                 System.out.println("Total Bill     : Rs. " + totalBill);
+             } else {
+                 System.out.println("Reservation ID " + id + " does not exist.");
+             }
+         }
+     } catch (SQLException e) {
+         System.out.println("Bill Calculation Error: " + e.getMessage());
+     }
+ }
+
+ public static void main(String[] args) {
+     initializeDatabase();
+     while (true) {
+         System.out.println("\n===== HOTEL RESERVATION MANAGEMENT =====");
+         System.out.println("1. Add Reservation");
+         System.out.println("2. Update Reservation");
+         System.out.println("3. Delete Reservation");
+         System.out.println("4. Find Reservation by ID");
+         System.out.println("5. Display All Reservations");
+         System.out.println("6. Calculate Bill");
+         System.out.println("7. Exit");
+         System.out.print("Enter choice: ");
+         int choice = Integer.parseInt(sc.nextLine().trim());
+
+         switch (choice) {
+             case 1: addReservation(); break;
+             case 2: updateReservation(); break;
+             case 3: deleteReservation(); break;
+             case 4: findReservationById(); break;
+             case 5: displayAllReservations(); break;
+             case 6: calculateBill(); break;
+             case 7: System.out.println("Exiting..."); return;
+             default: System.out.println("Invalid option!");
+         }
+     }
+ }
+}
